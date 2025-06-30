@@ -1,0 +1,238 @@
+@import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap');
+
+
+
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: flex;
+  flex-direction: column ;
+  background: linear-gradient(293.96deg, #5D63C2 29.45%, #2C2F5C 100%);;
+  background-repeat: no-repeat;
+}
+
+
+header {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 15px;
+}
+
+header h1 {
+  font-family: 'Orbitron', sans-serif;
+  color: #fff;
+  font-size: 20px;
+  font-weight: 400;
+}
+
+header a {
+  font-size: 16px;
+  color: #000000;
+  text-decoration: none;
+}
+
+
+header nav {
+  display: flex;
+  gap: 20px;
+}
+
+
+.container {
+  display: flex;
+  flex-direction: column;
+}
+
+.pag1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.pag1 img {
+  width: 300px;
+  height: 300px !important;
+}
+
+.pag1 > * {
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 15px;
+}
+
+
+.descricao {
+  gap: 5px;
+  font-family: 'Rajdhani', 'sans-serif';
+  font-weight: 500;
+}
+
+.descricao h2 {
+  font-size: 28px;
+  font-weight: 400;
+  font-family: 'Rajdhani';
+  color: #fff;
+}
+
+.descricao h1 {
+  font-size: 44px;
+  font-weight: 400;
+  color:aqua;
+}
+
+.descricao p {
+  color: #fff;
+  font-size: 22px;
+  line-height: 30px;
+  font-weight: 250;
+  font-family: 'Titillium Web';
+}
+
+
+
+.descricao a {
+  display: flex;
+  padding: 7px;
+  background-color: #FFD447;
+  color: #000;
+  font-family: 'Titillium Web';
+  font-weight: 500;
+  text-decoration: none;
+  width: 40%;
+  justify-content: center;
+  border-radius: 40px;
+  margin-top: 15px;
+}
+
+.passe {
+   display: flex;
+   flex-direction: row;
+   gap: 10px;
+   padding: 15px;
+   justify-content: center;
+}
+
+.linha {
+  background-color: #D9D9D9;
+  width: 4%;
+  height: 1vh;
+  
+}
+
+
+
+.digimons {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #ffffff;
+  padding: 15px;
+  gap: 30px;
+}
+
+
+.pesquisa {
+  display: flex;
+  flex-direction: row;
+}
+
+
+.pesquisa input {
+  padding: 5px;
+
+  outline: none;
+}
+
+.pesquisa span {
+  background: #2600FF;
+  padding: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+
+.faixas {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  width: 100%;
+  padding: 15px;
+  flex-wrap: wrap;
+}
+
+
+
+
+.bloco {
+  display: flex !important;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(180deg, #FFFFFF 57.69%, #533E8F 100%);
+  padding: 10px;
+  width: 15%;
+  border-radius: 15px;
+  gap: 18px;
+}
+
+.bloco h2 {
+  font-family: 'Orbitron';
+  color: #533E8F;
+  font-size: 18px;
+}
+
+.bloco p {
+  font-family: 'Rajdhani';
+  font-weight: 700;
+}
+
+.bloco a {
+    font-family: 'Titillium Web';
+    text-decoration: none;
+    color: #000;
+    font-size: 14px;
+}
+
+
+
+.bloco img {
+  width: 100%;
+}
+
+
+.modelo {
+  position: absolute;
+  visibility: hidden;
+}
+
+
+
+.botoes {
+  display: flex;
+  justify-content: space-evenly;
+  gap: 10vh;
+}
+
+.botoes button {
+  padding: 10px;
+  background-color:#5D63C2;
+  border: none;
+  border-radius: 15px;
+  color: #fff;
+  font-family: 'Titillium Web';
+}
+
+.botoes button:hover {
+  cursor: pointer;
+}
