@@ -93,6 +93,7 @@ const blocos = document.querySelector("#bloco");
 const faixas = document.querySelector('#faixas');
 const botao = document.querySelector("#botao");
 const anterior = document.querySelector("#botaoMenos");
+const input = document.querySelector("#valorPesquisa");
 
 
 const API = "https://digimon-api.vercel.app/api/digimon"
@@ -106,13 +107,58 @@ const porPagina = 18;
 let todosDigimons = [];
 
 
+
+
+
 fetch(API)
 .then(response => response.json())
 .then(data => {
+  /////////////////Parte pesquisa
+
+
+  input.addEventListener('input', function(event) {
+    let valorDigitado = event.target.value;
+
+
+
+
+      fetch(`${API}/name/${valorDigitado}`)
+      .then(response => response.json())
+      .then(data => { 
+
+        console.log(data[0].img)
+
+      faixas.innerHTML = ""
+        
+      const clone = blocos.cloneNode(true); 
+      clone.classList.remove('modelo')
+
+      clone.querySelector('img').src = data[0].img;
+      clone.querySelector('h2').textContent = `•${data[0].name}•`;
+
+      faixas.appendChild(clone);
+
+
+      })
+
+   
+
+
+  })
+
+
+
+
+
+
+////////////////////////////////////Função
+
+      if (atual - porPagina <= 0) 
+          anterior.style.display = "none"
+
 
 
     todosDigimons = data;
-    console.log(data)
 
     const proximos = todosDigimons.slice(atual, atual + porPagina);
   
@@ -126,11 +172,20 @@ fetch(API)
       clone.querySelector('h2').textContent = `•${digimon.name}•`;
 
 
+  
+
       faixas.appendChild(clone); 
     })
 
 
      function carregarMenos() {
+
+      if (atual <= todosDigimons.length) {
+      botao.style.display = "";
+      }
+
+      if (atual - porPagina <= 0) 
+          anterior.style.display = "none"
       if (atual - porPagina >= 0) {
           atual -= porPagina;
           faixas.innerHTML = '';
@@ -169,6 +224,9 @@ fetch(API)
 
 function carregarMais() {
 
+      if (atual - porPagina >= 0) 
+      anterior.style.display = ""
+
 
    faixas.innerHTML = '';
 
@@ -193,17 +251,15 @@ function carregarMais() {
 
 
   atual += porPagina
-/*
+
 
   if (atual >= todosDigimons.length) {
     botao.style.display = "none";
   }
 
 
-  */
+  
 }
-
-
 
 
 
