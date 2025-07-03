@@ -16,6 +16,8 @@ body {
   flex-direction: column ;
   background: linear-gradient(293.96deg, #5D63C2 29.45%, #2C2F5C 100%);;
   background-repeat: no-repeat;
+    overflow-x: hidden;
+     width: 100%;
 }
 
 
@@ -75,7 +77,11 @@ header nav {
   gap: 5px;
   font-family: 'Rajdhani', 'sans-serif';
   font-weight: 500;
+  width: 40%;
 }
+
+
+
 
 .descricao h2 {
   font-size: 28px;
@@ -108,7 +114,7 @@ header nav {
   font-family: 'Titillium Web';
   font-weight: 500;
   text-decoration: none;
-  width: 40%;
+  width: 20%;
   justify-content: center;
   border-radius: 40px;
   margin-top: 15px;
@@ -167,7 +173,8 @@ header nav {
 .faixas {
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
+  justify-content: center;
+    gap: 10px;
   width: 100%;
   padding: 15px;
   flex-wrap: wrap;
@@ -187,12 +194,15 @@ header nav {
   border-radius: 15px;
   gap: 18px;
   margin: 50px 0px;
+
+
 }
 
 .bloco h2 {
   font-family: 'Orbitron';
   color: #533E8F;
   font-size: 18px;
+
 }
 
 .bloco p {
@@ -223,8 +233,12 @@ header nav {
 
 .botoes {
   display: flex;
-  justify-content: space-evenly;
-  gap: 10vh;
+  justify-content: center;
+
+
+  flex-wrap: wrap;
+  gap: 10px;
+  
 }
 
 .botoes button {
@@ -234,6 +248,7 @@ header nav {
   border-radius: 15px;
   color: #fff;
   font-family: 'Titillium Web';
+  
 }
 
 .botoes button:hover {
@@ -250,4 +265,351 @@ footer {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+
+
+
+  /*| Dispositivo     | Largura típica | Exemplo `@media`                        |
+| --------------- | -------------- | --------------------------------------- |
+| Celular pequeno | ≤ 480px        | `@media (max-width: 480px)`             |
+| Celular médio   | ≤ 600px        | `@media (max-width: 600px)`             |
+| Tablet          | ≤ 768px        | `@media (max-width: 768px)`             |
+| Laptop          | ≤ 1024px       | `@media (max-width: 1024px)`            |
+| Monitor maior   | ≥ 1200px       | `@media (min-width: 1200px)` (opcional) |
+*/
+
+
+@media (min-width: 1200px) {
+  .botoes button {
+    width: 12vh;
+  }
+}
+
+
+
+@media (max-width: 1200px) {
+  .botoes button {
+    width: 12vh;
+  }
+
+    .descricao a {
+      width: 30%;
+  }
+}
+
+
+
+@media (max-width: 1024px) {
+
+  .descricao a {
+      width: 30%;
+  }
+  .bloco h2 {
+    font-size: 14px;
+  }
+  .bloco p {
+    font-size: 12px;
+}
+
+.bloco a {
+  font-size: 12px;
+}
+}
+
+
+@media (max-width: 853px) {
+  .descricao {
+
+  width: 50%;
+}
+
+.descricao a{
+  font-size: 12px;
+}
+  .bloco h2 {
+    font-size: 20px;
+  }
+  .bloco p {
+    font-size: 17px;
+}
+
+.bloco a {
+  font-size: 17px;
+}
+
+.linha {
+  height: 0.5vh;
+  
+}
+
+
+
+.pag1 img {
+  width: 250px;
+  height: 250px !important;
+}
+
+.descricao h2 {
+  font-size: 24px;
+}
+
+.descricao h1 {
+  font-size: 40px;
+}
+
+.descricao p {  
+  font-size: 18px;
+}
+
+
+
+  .digimons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center ;
+    background-color: #ffffff;
+    padding: 5px;
+  }
+
+
+  .faixas {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 100%;
+    padding: 5px;
+    flex-wrap: wrap;
+  }
+
+
+  .bloco {
+    width: 30%;
+    min-width: 240px; 
+    max-width: 100%;
+    margin: 10px 0;
+    padding: 10px;
+    gap: 10px;
+    width: 15%;
+    min-width: 240px;
+    display: flex;
+  }
+}
+
+
+
+@media (max-width: 600px) {
+  .descricao {
+
+  width: 50%;
+}
+
+.descricao a{
+  font-size: 10px;
+}
+  .bloco h2 {
+    font-size: 17px;
+  }
+  .bloco p {
+    font-size: 15px;
+}
+
+.bloco a {
+  font-size: 15px;
+}
+
+.linha {
+  height: 0.5vh;
+  
+}
+
+
+
+.pag1 img {
+  width: 250px;
+  height: 250px !important;
+}
+
+.descricao h2 {
+  font-size: 24px;
+}
+
+.descricao h1 {
+  font-size: 40px;
+}
+
+.descricao p {  
+  font-size: 18px;
+}
+
+
+  .digimons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center ;
+    background-color: #ffffff;
+    padding: 5px;
+  }
+
+
+  .faixas {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 100%;
+    padding: 5px;
+    flex-wrap: wrap;
+  }
+
+
+  .bloco {
+    width: 30%;
+    min-width: 240px; 
+    max-width: 100%;
+    margin: 10px 0;
+    padding: 10px;
+    gap: 10px;
+    width: 15%;
+    min-width: 240px;
+    display: flex;
+  }
+
+
+
+
+  footer {  
+  font-size: 10px;
+  height: 15vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  margin: 0;
+}
+}
+
+@media (max-width: 430px) {
+  .descricao {
+
+  width: 40%;
+}
+
+  header {
+  padding: 5px 7px;
+}
+
+
+  header h1 {
+    font-size: 12px;
+  }
+
+
+  header a {
+    font-size: 8px;
+  }
+
+
+  header nav {
+    gap: 5px;
+  }
+
+
+  .bloco h2 {
+    font-size: 24px;
+  }
+
+
+  .bloco p {
+    font-size: 20px;
+  }
+
+
+  .bloco a {
+    font-size: 20px;
+  }
+
+
+  .linha {
+    height: 0.3vh;
+  }
+
+  .pag1 img {
+    width: 150px;
+    height: 150px !important;
+  }
+
+
+  .descricao h2 {
+    font-size: 16px;
+  }
+
+
+  .descricao h1 {
+    font-size: 24px;
+  }
+
+
+  .descricao p {  
+    font-size: 12px;
+    line-height: 15px;
+  }
+
+
+  .descricao a {
+    padding: 2px;
+    width: 90%;
+    border-radius: 10px;
+    font-size: 12px;
+  }
+
+
+  .digimons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center ;
+    background-color: #ffffff;
+    padding: 5px;
+  }
+
+
+  .faixas {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 100%;
+    padding: 5px;
+    flex-wrap: wrap;
+  }
+
+
+  .bloco {
+    width: 30%;
+    min-width: 240px; 
+    max-width: 100%;
+    margin: 10px 0;
+    padding: 10px;
+    gap: 10px;
+    width: 15%;
+    min-width: 240px;
+    display: flex;
+  }
+
+
+
+
+  footer {  
+  font-size: 10px;
+  height: 15vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  margin: 0;
+}
+
 }
